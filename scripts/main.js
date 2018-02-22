@@ -5,174 +5,224 @@ var images = ['images/snow.jpg', 'images/bread.jpg', 'images/snow-kristen.jpg', 
 var posts = [
     {
         img: 'images/snow.jpg',
-        user: 'rcackerley',
-        comment: "Snowpocalypse",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'Here\'s a sample comment',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Snowpocalypse"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "A great Day!"
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-            } 
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "0"
     },
     {
         img: 'images/bread.jpg',
-        user: 'rcackerley',
-        comment: "Fresh bread",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'Love it!',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Fresh bread"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "Mmmmmm."
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
             },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "1"
     },
     {
         img: 'images/snow-kristen.jpg',
-        user: 'rcackerley',
-        comment: "Brrrrrr.",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'Hey that\'s me!',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "It's a snow day!"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "A great Day!"
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-            }
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "2"
     },
     {
         img: 'images/stranger.jpg',
-        user: 'rcackerley',
-        comment: "Stranger things",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'Eleven!',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Stranger Things"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "Eleven"
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-        }
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "3"
     },
     {
         img: 'images/boston.jpg',
-        user: 'rcackerley',
-        comment: "Best city.",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'I want Donuts',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "The best city"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "Let's move there!"
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-            }
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "4"
     },
     {
         img: 'images/red-sox.jpg',
-        user: 'rcackerley',
-        comment: "Fenway",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'Go Red Sox!',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Fenway"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "Go Red Sox"
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-            }
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "5"
     },
     {
         img: 'images/friends.jpg',
-        user: 'rcackerley',
-        comment: "Good times in Nashville",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'It was hot that day',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Friends"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "It was so hot."
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-            }
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "6"
     },
     {
         img: 'images/men.jpg',
-        user: 'rcackerley',
-        comment: "Thanksgiving",
-        userpost0: {
-            user0: 'kcackerley',
-            comment0: 'Hey, that\'s my family.',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Family"
             },
-        userpost1: {
-            user1: 'mellack',
-            comment1: 'Here\'s a sample comment',
+            {
+                user: 'kcackerley',
+                comment: "That's our family."
             },
-        userpost2: {
-            user2: 'robby',
-            comment2: 'Here\'s a sample comment',
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
             },
-        userpost3: {
-            user3: 'user_name',
-            comment3: 'Here\'s a sample comment',
-            }
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "7"
     },
 ];
+var updatePostContent = function () {
+    for (i = 0; i < posts.length; i++) {
 
+        if (heroImage.getAttribute('data-id') === posts[i].data) {
+            for (j = 0; j < posts[i].comments.length; j++) {
+                comments[j].children[0].textContent = posts[i].comments[j].user;
+                comments[j].children[1].textContent = posts[i].comments[j].comment;
+            }
+        }
+    }
+}
 var toggleActive = function(event) {
     for (i=0; i<navImages.length; i++) {
         if (navImages[i].classList.contains('active')) {
@@ -181,13 +231,8 @@ var toggleActive = function(event) {
     }
     event.target.classList.toggle('active');
     heroImage.src = event.target.src;
-
-    for (i = 0; i < navImages.length; i++) {
-        if (event.target.src === posts[i].img) {
-            
-        }
-    }
-    
+    heroImage.dataset["id"] = event.target.getAttribute('data-id');
+    updatePostContent();
     modal.classList.toggle('hidden');
 
 }
@@ -196,13 +241,18 @@ var toggleHidden = function(event) {
 }
 
 var slideRight = function (event) {
+    event.preventDefault();
     for (i = 0; i < navImages.length; i++) {
         if (heroImage.src === navImages[i].src) {
             if (i + 1 >= navImages.length) {
                 heroImage.src = navImages[0].src;
+                heroImage.dataset["id"] = navImages[0].dataset['id'];
+                updatePostContent();
                 break;
             } else {
                 heroImage.src = navImages[i + 1].src;
+                heroImage.dataset["id"] = navImages[i + 1].dataset['id'];
+                updatePostContent();
                 break;
             }
         }
@@ -210,13 +260,18 @@ var slideRight = function (event) {
 }
 
 var slideLeft = function (event) {
+    event.preventDefault();
     for (i = 0; i < navImages.length; i++) {
         if (heroImage.src === navImages[i].src) {
             if (i - 1 < 0 ) {
                 heroImage.src = navImages[navImages.length - 1].src;
+                heroImage.dataset["id"] = navImages[navImages.length - 1].dataset['id'];
+                updatePostContent();
                 break;
             } else {
                 heroImage.src = navImages[i - 1].src;
+                heroImage.dataset["id"] = navImages[i - 1].dataset['id'];
+                updatePostContent();
                 break;
             }
         }
@@ -227,6 +282,7 @@ for (i=0; i < images.length; i++) {
     var thumbnail = document.createElement('img');
     thumbnail.src = posts[i].img;
     thumbnail.setAttribute('class', 'thumbnail');
+    thumbnail.setAttribute('data-id', i)
     thumbnail.addEventListener('click', toggleActive);
     container.appendChild(thumbnail);
 }
