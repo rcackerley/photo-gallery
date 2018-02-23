@@ -250,6 +250,7 @@ var updatePostContent = function () {
     }
 }
 var toggleActive = function(event) {
+    console.log(event.target.src);
     heroImage.src = event.target.src;
     heroImage.dataset["id"] = event.target.getAttribute('data-id');
     updatePostContent();
@@ -298,14 +299,18 @@ var slideLeft = function (event) {
     }
 }
 
-for (i=0; i < posts.length; i++) {
+var locator = 0;
+
+posts.forEach(function(post) {
     var thumbnail = document.createElement('img');
-    thumbnail.src = posts[i].img;
+    thumbnail.src = post.img;
     thumbnail.setAttribute('class', 'thumbnail');
-    thumbnail.setAttribute('data-id', i)
+    thumbnail.setAttribute('data-id', locator)
+    locator++;
     thumbnail.addEventListener('click', toggleActive);
     container.appendChild(thumbnail);
-}
+});
+    
 main.appendChild(container);
 
 var navImages = document.querySelectorAll('.thumbnail');
