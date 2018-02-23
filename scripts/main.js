@@ -1,7 +1,7 @@
 var main = document.querySelector('.main')
 var container = document.createElement('div');
 container.classList.add('selections')
-var images = ['images/snow.jpg', 'images/bread.jpg', 'images/snow-kristen.jpg', 'images/stranger.jpg', 'images/boston.jpg', 'images/red-sox.jpg', 'images/friends.jpg', 'images/men.jpg']
+var images = ['images/snow.jpg', 'images/bread.jpg', 'images/snow-kristen.jpg', 'images/stranger.jpg', 'images/boston.jpg', 'images/red-sox.jpg', 'images/friends.jpg', 'images/men.jpg', 'images/men.jpg']
 var posts = [
     {
         img: 'images/snow.jpg',
@@ -211,6 +211,32 @@ var posts = [
         ],
         data: "7"
     },
+    {
+        img: 'images/apartment.jpg',
+        comments: [
+            {
+                user: 'rcackerley',
+                comment: "Home"
+            },
+            {
+                user: 'kcackerley',
+                comment: "Rooftop."
+            },
+            {
+                user: 'mellack',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'robby',
+                comment: "This is a sample comment"
+            },
+            {
+                user: 'rcackerley',
+                comment: "This is a sample comment"
+            },
+        ],
+        data: "8"
+    },
 ];
 var updatePostContent = function () {
     for (i = 0; i < posts.length; i++) {
@@ -278,7 +304,7 @@ var slideLeft = function (event) {
     }
 }
 
-for (i=0; i < images.length; i++) {
+for (i=0; i < posts.length; i++) {
     var thumbnail = document.createElement('img');
     thumbnail.src = posts[i].img;
     thumbnail.setAttribute('class', 'thumbnail');
