@@ -250,12 +250,6 @@ var updatePostContent = function () {
     }
 }
 var toggleActive = function(event) {
-    for (i=0; i<navImages.length; i++) {
-        if (navImages[i].classList.contains('active')) {
-            navImages[i].classList.toggle('active');
-        }
-    }
-    event.target.classList.toggle('active');
     heroImage.src = event.target.src;
     heroImage.dataset["id"] = event.target.getAttribute('data-id');
     updatePostContent();
