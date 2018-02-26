@@ -123,6 +123,8 @@ a.fa-times {
 .main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media (min-width: 1000px) {
@@ -134,5 +136,24 @@ a.fa-times {
         margin-left: 0px;
         margin-right: 0px;
     }
+    .separator {
+        width: 935px;
+    }
+}
+
+.main-prof-image {
+    height: 152px;
+    width: 152px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.profile-section {
+    margin-bottom: 44px;
+}
+
+.separator {
+    border-top: 1px solid #dadada;
+    margin: 30px;
 
 }
