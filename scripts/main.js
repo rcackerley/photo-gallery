@@ -1,7 +1,6 @@
-var main = document.querySelector('.main')
-var container = document.createElement('div');
-container.classList.add('selections')
-var images = ['images/snow.jpg', 'images/bread.jpg', 'images/snow-kristen.jpg', 'images/stranger.jpg', 'images/boston.jpg', 'images/red-sox.jpg', 'images/friends.jpg', 'images/men.jpg', 'images/men.jpg']
+var $main = $('.main')
+var $container = $('<div>');
+$container.addClass('selections')
 var posts = [
     {
         img: 'images/snow.jpg',
@@ -241,7 +240,7 @@ var posts = [
 var updatePostContent = function () {
     for (i = 0; i < posts.length; i++) {
 
-        if (heroImage.getAttribute('data-id') === posts[i].data) {
+        if ($heroImage.attr('data-id') === posts[i].data) {
             for (j = 0; j < posts[i].comments.length; j++) {
                 comments[j].children[0].textContent = posts[i].comments[j].user;
                 comments[j].children[1].textContent = posts[i].comments[j].comment;
@@ -251,28 +250,28 @@ var updatePostContent = function () {
 }
 var toggleActive = function(event) {
     console.log(event.target.src);
-    heroImage.src = event.target.src;
-    heroImage.dataset["id"] = event.target.getAttribute('data-id');
+    $heroImage.attr('src', event.target.src);
+    $heroImage.attr('data-id', event.target.getAttribute('data-id'));
     updatePostContent();
-    modal.classList.toggle('hidden');
+    $modal.toggleClass('hidden');
 
 }
 var toggleHidden = function(event) {
-    modal.classList.toggle('hidden');
+    $modal.toggleClass('hidden');
 }
 
 var slideRight = function (event) {
     event.preventDefault();
-    for (i = 0; i < navImages.length; i++) {
-        if (heroImage.src === navImages[i].src) {
-            if (i + 1 >= navImages.length) {
-                heroImage.src = navImages[0].src;
-                heroImage.dataset["id"] = navImages[0].dataset['id'];
+    for (i = 0; i < $navImages.length; i++) {
+        if ($heroImage.attr('src') === $navImages[i].src) {
+            if (i + 1 >= $navImages.length) {
+                $heroImage.attr('src', $navImages[0].src);
+                $heroImage.attr('data-id', $navImages[0].dataset['id']);
                 updatePostContent();
                 break;
             } else {
-                heroImage.src = navImages[i + 1].src;
-                heroImage.dataset["id"] = navImages[i + 1].dataset['id'];
+                $heroImage.attr('src', $navImages[i + 1].src);
+                $heroImage.attr("data-id", $navImages[i + 1].dataset['id']);
                 updatePostContent();
                 break;
             }
@@ -282,16 +281,16 @@ var slideRight = function (event) {
 
 var slideLeft = function (event) {
     event.preventDefault();
-    for (i = 0; i < navImages.length; i++) {
-        if (heroImage.src === navImages[i].src) {
+    for (i = 0; i < $navImages.length; i++) {
+        if ($heroImage.attr('src') === $navImages[i].src) {
             if (i - 1 < 0 ) {
-                heroImage.src = navImages[navImages.length - 1].src;
-                heroImage.dataset["id"] = navImages[navImages.length - 1].dataset['id'];
+                $heroImage.attr('src', $navImages[$navImages.length - 1].src);
+                $heroImage.attr("data-id", $navImages[$navImages.length - 1].dataset['id']);
                 updatePostContent();
                 break;
             } else {
-                heroImage.src = navImages[i - 1].src;
-                heroImage.dataset["id"] = navImages[i - 1].dataset['id'];
+                $heroImage.attr('src', $navImages[i - 1].src );
+                $heroImage.attr("data-id", $navImages[i - 1].dataset['id']);
                 updatePostContent();
                 break;
             }
@@ -302,29 +301,30 @@ var slideLeft = function (event) {
 var locator = 0;
 
 posts.forEach(function(post) {
-    var thumbnail = document.createElement('img');
-    thumbnail.src = post.img;
-    thumbnail.setAttribute('class', 'thumbnail');
-    thumbnail.setAttribute('data-id', locator)
+    var $thumbnail = $('<img>', {
+      'src': post.img,
+      'class': 'thumbnail',
+      'data-id': locator,
+    });
     locator++;
-    thumbnail.addEventListener('click', toggleActive);
-    container.appendChild(thumbnail);
+    $thumbnail.on('click', toggleActive);
+    $container.append($thumbnail);
 });
-    
-main.appendChild(container);
 
-var navImages = document.querySelectorAll('.thumbnail');
-var heroImage = document.querySelector('.hero-image');
-var modal = document.querySelector('.modal');
-var closeX = document.querySelector('.fa-times');
-closeX.addEventListener('click', toggleHidden);
+$main.append($container);
 
-var rightArrow = document.querySelector('.fa-chevron-right');
-rightArrow.addEventListener('click', slideRight);
+var $navImages = $('.thumbnail');
+var $heroImage = $('.hero-image');
+var $modal = $('.modal');
+var $closeX = $('.fa-times');
+$closeX.on('click', toggleHidden);
 
-var leftArrow = document.querySelector('.fa-chevron-left');
-leftArrow.addEventListener('click', slideLeft);
+var $rightArrow = $('.fa-chevron-right');
+$rightArrow.on('click', slideRight);
 
-var getModal = document.querySelectorAll('.modal-flex');
+var $leftArrow = $('.fa-chevron-left');
+$leftArrow.on('click', slideLeft);
 
-var comments = getModal[0].children[1].children[2].children
+var $getModal = $('.modal-flex');
+
+var comments = $getModal[0].children[1].children[2].children
