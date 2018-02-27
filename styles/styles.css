@@ -37,10 +37,6 @@ body {
     object-fit: cover;
 }
 
-.active {
-    /* border: 2px solid #919191; */
-}
-
 .modal {
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -133,8 +129,8 @@ a.fa-times {
         justify-content: space-between;
     }
     .thumbnail {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0;
+        margin-right: 0;
     }
     .separator {
         width: 935px;
